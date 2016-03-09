@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dungeons and Dragons Player Creator</title>
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>D&D Player Creator</h1>
+				<br>
+					<form role="form" class="form-inline">
+						<div class="form-group col-md-6">
+							<label for="Name" id="nameLabel">Name:</label>
+							<input type="text" id="Name" class="form-control" placeholder="Character Name">
+						</div>
+						
+					</form>
+			</div>
+			<h2>Character Stats</h2>
+			<div class="row">
+				<div class="btn-group col-md-3">
+					<label for="race">Race:</label>
+					<select name="Race" id="race" class="form-control">
+						<!-- To be filled by JS -->
+					</select>
+				</div>
+				<div class="btn-group col-md-3">
+					<label for="Class">Class:</label>
+					<select name="Class" id="class" class="form-control">
+						<!-- To be filled by JS -->
+					</select>
+				</div>
+				<div class="btn-group col-md-3">
+					<label for="gender">Gender:</label>
+					<select name="Gender" id="gender" class="form-control">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="col-md-3">
+					<label for="level">Level:</label>
+					<input type="number" id="level" class="form-control" min="1" max="30" value="1">
+				</div>
+			</div>
+			<h2>Ability Scores</h2>
+			<div class="row form-inline">
+					<div class="col-md-2 abilityDiv">
+						<label for="strength">Strength:</label>
+						<div class="input-group">
+							<input type="number" id="strength" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+					<div class="col-md-2 abilityDiv">
+						<label for="constitution">Constitution:</label>
+						<div class="input-group">
+							<input type="number" id="constitution" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+					<div class="col-md-2 abilityDiv">
+						<label for="dexterity">Dexterity:</label>
+						<div class="input-group">
+							<input type="number" id="dexterity" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+					<div class="col-md-2 abilityDiv">
+						<label for="intelligence">Intelligence:</label>
+						<div class="input-group">
+							<input type="number" id="intelligence" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+					<div class="col-md-2 abilityDiv">
+						<label for="wisdom">Wisdom:</label>
+						<div class="input-group">
+							<input type="number" id="wisdom" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+					<div class="col-md-2 abilityDiv">
+						<label for="charisma">Charisma:</label>
+						<div class="input-group">
+							<input type="number" id="charisma" class="form-control" min="1">
+							<span class="input-group-addon"></span>
+						</div>
+						<button class="btn btn-default abilityButton">Roll</button>
+					</div>
+				</div>
+				<h2>Other Stuffs</h2>
+				<div class="row">
+					<div class="btn-group col-md-4">
+						<label for="alignment">Alignment:</label>
+						<select name="Alignment" id="alignment" class="form-control">
+							<option value="lawfulGood">Lawful Good</option>
+							<option value="good">Good</option>
+							<option value="chaoticGood">Chaotic Good</option>
+							<option value="lawfulNeutral">Lawful Neutral</option>
+							<option value="unaligned">Neutral</option>
+							<option value="chaoticNeutral">Chaotic Neutral</option>
+							<option value="lawfulEvil">Lawful Evil</option>
+							<option value="evil">Evil</option>
+							<option value="chaoticEvil">Chaotic Evil</option>
+							
+						</select>
+					</div>
+					<div class="col-md-2 goldDiv">
+						<label for="gold">Gold:</label>
+						<input type="number" id="gold" class="form-control" min="0" value="0">
+					</div>
+					<div class="col-md-2 expDiv">
+						<label for="exp">Experience Points:</label>
+						<input type="number" id="exp" class="form-control" min="0" value="0" step="5">
+					</div>
+				</div>
+				<!-- <div class="row">
+					<div class="col-md-12">
+						<label for="backgroundInfo">Tell Your Story:</label>
+						<textarea class="form-control" id="backgroundInfo"></textarea>
+					</div>
+				</div> -->
+				<h2>Powers 
+				<span class="glyphicon glyphicon-question-sign small" ata-toggle="tooltip" data-placement="right" title="Look up what each power does in the Player Manual"></span></h2>
+				<div class="row powerdiv">
+					<!-- Powers Generated by JS will go here -->
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a class="btn btn-success btn-block btn-lg" onclick="saveAlltheThings();" role="button" id="DoIt">Create Player File</a><!-- I'll Do It!!! -->
+					</div>
+				</div>
+			</div>
+	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

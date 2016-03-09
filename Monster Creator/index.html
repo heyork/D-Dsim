@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Monster Creator</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>You are in Control!</h1>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-5">
+					<label for="MonsterName">Monter Name</label></br><input type="text" id="MonsterName" class="form-control">
+				</div>
+				<div class="col-md-5">
+					<label for="MonsterRole">Monster Role</label></br><input type="text" id="MonsterRole" class="form-control">
+				</div>
+				<div class="col-md-1">
+					<label for="Level">Level</label></br><input type="number" id="Level" min = "0" class="form-control">
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="size">Size</label></br>
+					<select id="Size" class="form-control">
+						<option>Tiny</option>
+						<option>Small</option>
+						<option>Medium</option>
+						<option>Large</option>
+						<option>Huge</option>
+						<option>Gargantuan</option>
+					</select>
+				</div>
+				<span class="col-md-7"></span>
+				<div class="col-md-1">
+					<label for="XP">XP</label></br><input type="number" id="XP" min = "0" step="5" class="form-control">
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="Initiative">Initiative</label></br><input type="number" id="Initiative" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="Sense">Sense</label></br><input type="number" id="Sense" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="HitPoints">Hit Points</label></br><input type="number" id="HitPoints" class="form-control">
+				</div>
+				<div class="col-md-3">
+					<label for="Bloodied">Bloodied</label></br><input type="checkbox" id="Bloodied">
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-md-3"><label for="ArmorClass">Armor Class (AC)</label></br><input type = "number" id= "ArmorClass" min="1" class="form-control"></div>
+				<div class="col-md-3"><label for="Fortitude">Fortitude</label></br><input type="number" id="Fortitude" min="1" class="form-control"></div>
+				<div class="col-md-3"><label for="Reflex">Reflex</label></br><input type="number" id="Reflex" min="1" class="form-control"></div>
+				<div class="col-md-3"><label for="Will">Will</label></br><input type="number" id="Will" min="1" class="form-control"></div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-md-3"><label for="SavingThrows">Saving Throws</label></br><input type = "number" id="SavingThrows" min="0" class="form-control"></div>
+				<div class="col-md-3"><label for="Speed">Speed</label></br><input type="number" id="Speed" min="0" class="form-control"></div>
+				<div class="col-md-3"><label for="ActionPoints">Action Points</label></br><input type="number" id="ActionPoints" min="1" class="form-control"></div>
+			</div>
+			<hr>
+			<div id="Powers" class="row">
+				<h2>Powers</h2>
+				<button type="button" class="btn btn-primary" onclick="addPower()">Add Powers</button>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="col-md-3">
+					<label for="Alignment">Alignment</label></br>
+						<select id = "Alignment" class="form-control">
+							<option>Lawful Good</option>
+							<option>Neutral Good</option>
+							<option>Chaotic Good</option>
+							<option>Lawful Neutral</option>
+							<option>Neutral</option>
+							<option>Chaotic Neutral</option>
+							<option>Lawful Evil</option>
+							<option>Neutral Evil</option>
+							<option>Chaotic Evil</option>
+						</select>
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<h2>Ablility Scores</h2>
+				<div class="col-md-4">
+					<label for="Strength">Strength</label></br>
+					<input type="number" id="Strength" min="1" class="form-control">
+				</div>
+				<div class="col-md-4">
+					<label for="Dextarity">Dextarity</label></br>
+					<input type="number" id="Dextarity" min="1" class="form-control">
+				</div>
+				<div class="col-md-4">
+					<label for="Wisdom">Wisdom</label></br>
+					<input type="number" id="Wisdom" min="1" class="form-control">
+				</div>
+			</div>
+			</br>
+			<div class="row">
+				<div class="col-md-4">
+					<label for="Constitution">Constitution</label></br>
+					<input type="number" id="Constitution" min="1" class="form-control">
+				</div>
+				<div class="col-md-4">
+					<label for="Intelligence">Intelligence</label></br>
+					<input type="number" id="Intelligence" min="1" class="form-control">
+				</div>
+				<div class="col-md-4">
+					<label for="Charisma">Charisma</label></br>
+					<input type="number" id="Charisma" min="1" class="form-control">
+				</div>
+			</div>
+			<hr>
+			<div id="Equipment" class="row">
+				<h2>Equipment</h2>
+				<button type="button" class="btn btn-primary" onclick="addEquipment()">Add Equipment</button></br>
+			</div>
+			<hr>
+			<div class="row">
+				<a href="#"><button type="button" class="btn col-md-12 btn-success">Save Monster</button></a>
+			</div>
+		</div>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/script.js"></script>
+	</body>
+<html>
